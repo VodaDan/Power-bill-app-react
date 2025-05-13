@@ -3,6 +3,7 @@ import MainLayout from "./Components/MainLayout";
 import Home from "./Components/Home";
 import PrivateRoute from "./routes/PrivateRoute";
 import Login from "./Components/Login"
+import Logout from "./Components/Logout";
 
 
 function App(props) {
@@ -18,6 +19,7 @@ function App(props) {
                     }
                 >
                     <Route path="/home" element={<Home />} />
+                    <Route path="/logout" element={<Logout />} />
                     {/* <Route path="/user" element={<User />} />
                     <Route path="/bills" element={<Bills />} />
                     <Route path="/contact" element={<Contact />} /> */}

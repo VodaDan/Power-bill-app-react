@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import { useAuth } from "../context/auth-context";
 
 const Navbar = () => {
     return (
@@ -10,7 +11,7 @@ const Navbar = () => {
                     <li><Link to="/bills" className="nav-link">Bills</Link></li>
                     <li><Link to="/contact" className="nav-link">Contact</Link></li>         
                 </ul>
-            <button id="logoutButton">Logout</button>
+            <Link to='/logout'><button id="logoutButton" >Logout</button></Link>
         </nav>
     );
 };
