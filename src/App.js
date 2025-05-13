@@ -1,10 +1,19 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import MainLayout from "./Components/MainLayout";
+import Home from "./Components/Home";
+import './style.css';
+
 function App(props) {
     return (
-        <div style={{color: "green"}}>
-            <h1>Heey there {props.name}</h1>
-            <button>{props.name}</button>
-        </div>
-    
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<MainLayout />}>
+                    <Route index element={<Home />} />
+                    {/* <Route path="/user" element={<User />} />
+                    <Route path="/bills" element={<Bills />} /> */}
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 };
 
