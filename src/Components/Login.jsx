@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { useAuth } from "../context/auth-context";
 
 const Login = () => {
     const { login } = useAuth();
@@ -11,17 +11,20 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            const response = await fetch("http://localhost:4005/login", {
+            const response = await fetch("http://localhost:4005/auth/login", {
                 method: "POST",
                 headers: {"Content-Type" : "application/json"},
                 body: JSON.stringify({email,password}),
             });
         
             if(!response.ok) {
+                console.log(response.json());
                 throw new Error("Invalid Credentials!");
+                
             }
 
             const data = await response.json();
+            localStorage.setItem("email",email);
             login(data);
             navigate("/home");
         } catch (err) {
@@ -49,3 +52,5 @@ const Login = () => {
         </div>
     );
 };
+
+export default Login;
