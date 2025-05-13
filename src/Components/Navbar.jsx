@@ -1,15 +1,14 @@
 import {Link} from "react-router-dom";
-import '../style.css';
 
 const Navbar = () => {
     return (
-        <nav>
+        <nav className="navbar">
             <div className="logo">PowerBillApp</div>
                 <ul className="nav-links">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/user">User</Link></li>
-                    <li><Link to="/bills">Bills</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>         
+                    <li><Link to="/" className="nav-link">Home</Link></li>
+                    <li><Link to="/user" className="nav-link">User</Link></li>
+                    <li><Link to="/bills" className="nav-link">Bills</Link></li>
+                    <li><Link to="/contact" className="nav-link">Contact</Link></li>         
                 </ul>
             <button id="logoutButton">Logout</button>
         </nav>
