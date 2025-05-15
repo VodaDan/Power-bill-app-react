@@ -5,6 +5,7 @@ import PrivateRoute from "./routes/PrivateRoute";
 import Login from "./Components/Login"
 import Logout from "./Components/Logout";
 import User from "./Components/User";
+import Bills from "./Components/Bills";
 
 function App(props) {
     return (
@@ -21,8 +22,8 @@ function App(props) {
                     <Route path="/home" element={<Home />} />
                     <Route path="/logout" element={<Logout />} />
                     <Route path="/user" element={<User />} />
-                    {/* <Route path="/bills" element={<Bills />} />
-                    <Route path="/contact" element={<Contact />} /> */}
+                    <Route path="/bills" element={<Bills />} />
+                    {/*<Route path="/contact" element={<Contact />} /> */}
                 </Route>
             </Routes>
         </BrowserRouter>
