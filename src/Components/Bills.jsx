@@ -40,7 +40,6 @@ const Bills = () => {
         <thead>
           <tr>
             <th>Bill ID</th>
-            <th>Customer ID</th>
             <th>Issue Date</th>
             <th>Due Date</th>
             <th>Amount (Ron)</th>
@@ -50,7 +49,6 @@ const Bills = () => {
           {billsInfo.map((bill) => (
             <tr key={bill.id}>
               <td>{bill.id}</td>
-              <td>{bill.customerId}</td>
               <td>{bill.issueDate}</td>
               <td>{bill.dueDate}</td>
               <td>{Number(bill.amount).toFixed(2)}</td>

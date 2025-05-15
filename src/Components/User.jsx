@@ -3,38 +3,12 @@ import userApi from "../api/userApi";
 import './User.css';
 
 const User = () => {
-  const [userInfo, setUserInfo] = useState(null);
-  const email = localStorage.getItem("email");
-
-  // useEffect(() => {
-  //   const fetchUserData = async () => {
-  //     try {
-  //       const response = await userApi.get(`/${email}`);
-  //       setUserInfo(response.data);
-  //       console.log(response.data);
-  //     } catch (error) {
-  //       console.error("Failed to fetch data: ", error);
-  //     }
-  //   };
-
-  //   if (email) {
-  //     fetchUserData();
-  //   } else {
-  //     console.warn("No email found in localStorage");
-  //   }
-  // }, [email]);
-
-
-  // if (!userInfo) {
-  //   return <p>Loading user data...</p>;
-  // }
-
+  
     const userId = localStorage.getItem('id');
     const userName = localStorage.getItem('name');
     const userEmail = localStorage.getItem('email');
     const userAddress = localStorage.getItem('address');
 
-        console.log(userId);
 
     return (
         <div className="user-card">
