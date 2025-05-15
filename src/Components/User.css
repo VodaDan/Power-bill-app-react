@@ -1,0 +1,38 @@
+/* User.css */
+.user-card {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  font-family: system-ui, sans-serif;
+}
+
+.user-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #333;
+}
+
+.user-detail {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.user-detail strong {
+  display: inline-block;
+  width: 90px;          /* label width */
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .user-card {
+    padding: 1.5rem;
+  }
+  .user-card h2 {
+    font-size: 1.4rem;
+  }
+}
