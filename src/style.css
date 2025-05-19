@@ -24,7 +24,7 @@ body {
     display: flex;
     gap: 1.5rem;
     margin: 0;
-    padding: 0 1rem 0 0;
+    padding: 0 5rem 0 0;
 }
 
 .nav-link {
@@ -32,6 +32,8 @@ body {
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s;
+    padding:1rem;
+    font-weight:bolder;
 }
 
 .home {
@@ -65,7 +67,7 @@ body {
     flex-direction: column; 
     text-align: center;
     justify-content: center;
-    width: 100%;
+
     height: 12rem;
 
 }

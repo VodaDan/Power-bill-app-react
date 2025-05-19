@@ -8,6 +8,7 @@ const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [role,setRole] = useState("");
 
     const handleLogin = async () => {
         try {
@@ -23,9 +24,26 @@ const Login = () => {
                 
             }
 
+            
+
             const data = await response.json();
             localStorage.setItem("email",email);
+            
+
             login(data);
+            const token = localStorage.getItem("token");
+            const roleResponse = await fetch("http://localhost:4005/api/authorize",{
+                method: "GET",
+                headers: {"Content-Type" : "application/json", "Authorization": `Bearer ${token}`}
+            });
+
+            if(!roleResponse.ok) {
+                console.log(roleResponse.json);
+                throw new Error("Invalid role");
+            }
+            const roleData = await roleResponse.json();
+            localStorage.setItem("role",roleData.role);
+
             navigate("/home");
         } catch (err) {
             alert(err.message);

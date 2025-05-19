@@ -22,7 +22,7 @@ const Home = () => {
       console.warn("No email found in localStorage");
     }
   }, [email]);
-
+    console.log(localStorage.getItem('role'));
     return (
         <div className="home-page">
             <h1>Welcome to our page!</h1>
