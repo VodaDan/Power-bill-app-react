@@ -1,0 +1,24 @@
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.contact-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact-link {
+  color: #007acc;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #005f99;
+  text-shadow: 0 0 5px rgba(0, 122, 204, 0.6);
+}
